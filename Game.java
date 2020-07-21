@@ -5,7 +5,8 @@ package uno;
 import java.awt.Font;
 import java.util.ArrayList;
 import java.util.Arrays;
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
+import javax.swing.*;
 
 /**
  *
@@ -76,7 +77,7 @@ public class Game {
         
         if (card.getValue() == UnoCard.Value.Reverse) {           
             JLabel message = new JLabel(playerIds[currentPlayer] + " The game direction changed!");
-            message.setont(new Font("Arial", Font.BOLD, 48));
+            message.setFont(new Font("Arial", Font.BOLD, 48));
             JOptionPane.showMessageDialog(null, message);
             gameDirection ^= true;
             currentPlayer = playerIds.length - 1;
@@ -174,7 +175,7 @@ public class Game {
     public void submitPlayerCard(String pid, UnoCard card, UnoCard.Color declaredColor) throws InvalidColorSubmissionException, InvalidValueSubmissionException, InvalidPlayerTurnException {
         checkPlayerTurn(pid);
         
-        ArrayList<UnoCard> pHand = getPlayrHand(pid);
+        ArrayList<UnoCard> pHand = getPlayerHand(pid);
         
         if (!validCardPlay(card)) {
             if (card.getColor() == UnoCard.Color.Wild) {
@@ -188,7 +189,7 @@ public class Game {
                 JOptionPane.showMessageDialog(null, message);
                 throw new InvalidColorSubmissionException(message, card.getColor(), validColor);
             }
-            else if (card.getValue != valid Value) {
+            else if (card.getValue() != validValue) {
                 JLabel message2 = new JLabel("Invalid player move, expected value: " + validValue + " but got color " + card.getValue());
                 message2.setFont(new Font("Arial", Font.BOLD, 48));
                 JOptionPane.showMessageDialog(null, message2);
@@ -219,7 +220,7 @@ public class Game {
             }
         }
         
-        if (card.getColor() = UnoCard.Color.Wild) {
+        if (card.getColor() == UnoCard.Color.Wild) {
             validColor = declaredColor;
         }
         
@@ -264,7 +265,7 @@ public class Game {
             if (gameDirection == true) {
                 currentPlayer = (currentPlayer - 2) % playerIds.length;
                 if (currentPlayer == -1) {
-                    currentPlayer = playerIds.ength - 1;
+                    currentPlayer = playerIds.length - 1;
                 }
                 
                 if (currentPlayer == -2) {
@@ -283,13 +284,13 @@ public class Game {
 class InvalidPlayerTurnException extends Exception {
     String playerId;
     
-    public InvalidPlayerTurnExceptiion(String message, String pid) {
-        supper(message);
+    public InvalidPlayerTurnException(String message, String pid) {
+        super(message);
         playerId = pid;
     }
     
     public String getPid() {
-        returnplayerId;
+        return playerId;
     }
 }
 
@@ -307,7 +308,7 @@ class InvalidValueSubmissionException extends Exception {
     private UnoCard.Value expected;
     private UnoCard.Value actual;
     
-    public InvalidColorSubmissionException(String message, UnoCard.Value actual, UnoCard.Value expected) {
+    public InvalidValueSubmissionException(String message, UnoCard.Value actual, UnoCard.Value expected) {
         this.actual = actual;
         this.expected = expected;
     }

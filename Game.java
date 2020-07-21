@@ -184,7 +184,7 @@ public class Game {
             }
             
             if(card.getColor() != validColor) {
-                JLabel message = new JLabel("Invalid player move, expected color: " + valid Color + " but got color " + card.getColor());
+                JLabel message = new JLabel("Invalid player move, expected color: " + validColor + " but got color " + card.getColor());
                 message.setFont(new Font("Arial", Font.BOLD, 48));
                 JOptionPane.showMessageDialog(null, message);
                 throw new InvalidColorSubmissionException(message, card.getColor(), validColor);
@@ -193,8 +193,8 @@ public class Game {
                 JLabel message2 = new JLabel("Invalid player move, expected value: " + validValue + " but got color " + card.getValue());
                 message2.setFont(new Font("Arial", Font.BOLD, 48));
                 JOptionPane.showMessageDialog(null, message2);
-                throw new InvalidValueSubmissionException(message2, card.getColor(), validColor);
-            }         
+                throw new InvalidValueSubmissionException(message2, card.getValue(), validValue);
+            }        
         }
         
         pHand.remove(card);

@@ -124,7 +124,7 @@ public class PickColorFrame extends javax.swing.JFrame {
         popUp.declaredColor = UnoCard.Color.Red;
         popUp.gameStage.setPidName(popUp.game.getCurrentPlayer());
         popUp.gameStage.setButtonIcons();
-        popUp.topCardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("C:\\Users\\Wayne\\Documents\\NetBeansProjects\\Uno\\src\\uno\\images\\PNGs\\small\\" + popUp.game.getTopCardImage())));
+        popUp.topCardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/** place your directory here */" + popUp.game.getTopCardImage())));
         popUp.game.setCardColor(UnoCard.Color.Red);
         popUp.dispose();
     }                                         
@@ -139,7 +139,7 @@ public class PickColorFrame extends javax.swing.JFrame {
         popUp.declaredColor = UnoCard.Color.Blue;
         popUp.gameStage.setPidName(popUp.game.getCurrentPlayer());
         popUp.gameStage.setButtonIcons();
-        popUp.topCardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("C:\\Users\\Wayne\\Documents\\NetBeansProjects\\Uno\\src\\uno\\images\\PNGs\\small\\" + popUp.game.getTopCardImage())));
+        popUp.topCardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/** place your directory here */" + popUp.game.getTopCardImage())));
         popUp.game.setCardColor(UnoCard.Color.Blue);
         popUp.dispose();
     }                                          
@@ -154,7 +154,7 @@ public class PickColorFrame extends javax.swing.JFrame {
         popUp.declaredColor = UnoCard.Color.Green;
         popUp.gameStage.setPidName(popUp.game.getCurrentPlayer());
         popUp.gameStage.setButtonIcons();
-        popUp.topCardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("C:\\Users\\Wayne\\Documents\\NetBeansProjects\\Uno\\src\\uno\\images\\PNGs\\small\\" + popUp.game.getTopCardImage())));
+        popUp.topCardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/** place your directory here */" + popUp.game.getTopCardImage())));
         popUp.game.setCardColor(UnoCard.Color.Green);
         popUp.dispose();
     }                                           
@@ -169,7 +169,7 @@ public class PickColorFrame extends javax.swing.JFrame {
         popUp.declaredColor = UnoCard.Color.Yellow;
         popUp.gameStage.setPidName(popUp.game.getCurrentPlayer());
         popUp.gameStage.setButtonIcons();
-        popUp.topCardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("C:\\Users\\Wayne\\Documents\\NetBeansProjects\\Uno\\src\\uno\\images\\PNGs\\small\\" + popUp.game.getTopCardImage())));
+        popUp.topCardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/** place your directory here */" + popUp.game.getTopCardImage())));
         popUp.game.setCardColor(UnoCard.Color.Yellow);
         popUp.dispose();
     }                                            

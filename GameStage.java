@@ -43,7 +43,7 @@ public class GameStage extends javax.swing.JFrame
         populateArrayList();
         game.start(game);
         setPidName();
-        topCardButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodas\\OneDrive\\Desktop\\sprites\\small\\" + game.getTopCardImage()));
+        topCardButton.setIcon(new javax.swing.ImageIcon("/** place your directory here */" + game.getTopCardImage()));
         setButtonIcons();
     }
    
@@ -52,7 +52,7 @@ public class GameStage extends javax.swing.JFrame
         String[] cardNames = listString.split(",");
         cardIds = new ArrayList<>(Arrays.asList(cardNames));
         for (int i = 0; i < cardIds.size(); i++) {
-            cardButtons.get(i).setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodas\\OneDrive\\Desktop\\sprites\\small\\" + cardIds.get(i) + ".png"));
+            cardButtons.get(i).setIcon(new javax.swing.ImageIcon("/** place your directory here */" + cardIds.get(i) + ".png"));
         }
        
         for (int i = cardIds.size(); i < cardButtons.size(); i++) {
